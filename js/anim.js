@@ -1,0 +1,94 @@
+$(document).ready(function(){
+	var texts = ['Yeah, yeah. We know.', 'The old, classic prefrosh trope,','offering essay reviews for money.','HOW ORIGINAL.',"We've been on r/A2C too.","BUT","We're different.","WHY?"]
+	var count = 0;
+	var endReached = false
+	$("#progress-arrow").click(function(){
+		if(endReached==true){
+			document.querySelector('#third').scrollIntoView({
+		  behavior: 'smooth'
+			});
+			startAnim()
+		}
+		console.log("arrow-clicked")
+		count+=1
+		$("#updater").fadeOut(100,function(){
+			$("#updater").text(texts[count%texts.length])
+			$("#updater").fadeIn(100)
+		})
+		if((count)==texts.length-1){
+			$("#progress-arrow").css({'transform':'rotate(90deg)'})
+			endReached = true
+		}
+	})
+	function startAnim(){
+		$("#1").animate({'marginLeft':'10px'},1000,function(){
+			$("#2").animate({'marginLeft':'10px'},1000,function(){
+				$("#3").animate({'marginLeft':'10px'},1000,function(){
+					$("#4").animate({'marginLeft':'10px'},1000,function(){
+						$("#5").animate({'marginLeft':'10px'},1000,function(){
+							$("#6").animate({'marginLeft':'10px'},1000,function(){
+								$("#7").animate({'marginLeft':'10px'},1000,function(){
+									$("#8").animate({'marginLeft':'10px'},1000,function(){
+										$("#9").animate({'marginLeft':'10px'},1000,function(){
+											$("#10").animate({'marginLeft':'10px'},1000,function(){
+												$("#11").animate({'marginLeft':'10px'},1000,function(){
+													$("#ok-click").animate({'marginLeft':'10px'},1000,function(){
+														console.log('anim-fin.')
+													})
+												})
+											})
+										})
+									})
+								})
+							})
+						})
+					})
+				})
+			})
+		})
+	}
+	$("#ok-click").click(function(){
+		console.log('btn-click')
+		$("#1").animate({'marginLeft':'-1000px'},400,function(){
+			$("#2").animate({'marginLeft':'-1000px'},400,function(){
+				$("#3").animate({'marginLeft':'-1000px'},400,function(){
+					$("#4").animate({'marginLeft':'-1000px'},400,function(){
+						$("#5").animate({'marginLeft':'-1000px'},400,function(){
+							$("#6").animate({'marginLeft':'-1000px'},400,function(){
+								$("#7").animate({'marginLeft':'-1000px'},400,function(){
+									$("#8").animate({'marginLeft':'-1000px'},400,function(){
+										$("#9").animate({'marginLeft':'-1000px'},400,function(){
+											$("#10").animate({'marginLeft':'-1000px'},400,function(){
+												$("#11").animate({'marginLeft':'-1000px'},400,function(){
+													$("#ok-click").animate({'marginLeft':'-1000px'},400,function(){
+														$("#1").hide()
+														$("#2").hide()
+														$("#3").hide()
+														$("#4").hide()
+														$("#5").hide()
+														$("#6").hide()
+														$("#7").hide()
+														$("#8").hide()
+														$("#9").hide()
+														$("#10").hide()
+														$("#11").hide()
+														$("#12").hide()
+														$("#okay-click").hide()														
+														$("#hidden-wrapper").fadeIn()
+														$(".navbar").css({'opacity':'1'})
+														window.location.replace("home.html");
+
+													})
+												})
+											})
+										})
+									})
+								})
+							})
+						})
+					})
+				})
+			})
+		})
+	})
+})

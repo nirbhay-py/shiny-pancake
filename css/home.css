@@ -1,0 +1,53 @@
+.main-content{
+	padding: 30px;
+	color: white;
+}
+html{
+	overflow-y: scroll!important;
+}
+.fancy{
+	height:3px!important;
+}
+
+.profiles{
+	display: flex;
+	margin-top: 30px;
+	height: 100%;
+	justify-content: space-evenly;
+}
+
+.profile{
+	width: 300px;
+	height: 300px;
+	margin-top: 20px;
+	background-color: white;
+	box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .profiles {
+  	flex-direction: column;
+  }
+}
+.content{
+	margin: 0 auto;
+	margin-top: 50px;
+	color: #124116;
+}
+
+.fancy2{
+	height: 3px!important;
+	width: 25%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.prompt{
+	margin-top: 30px;
+}
+.unique{
+	font-weight: 200!important;
+}
